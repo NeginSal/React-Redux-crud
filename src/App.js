@@ -1,10 +1,18 @@
+import React from 'react';
+import { Routes, Route } from "react-router-dom";
+import Home from './components/Home';
+import EditUser from './components/EditUser';
+import AddUser from './components/AddUser';
 
-
-function App() {
+const App = () => {
   return (
-    <div>
-     
-    </div>
+    <>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/edit/:id' element={<EditUser />} />
+        <Route path='/create' element={< AddUser />} />
+      </Routes>
+    </>
   );
 }
 
